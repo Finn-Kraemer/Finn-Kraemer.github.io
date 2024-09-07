@@ -1,0 +1,94 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Finn Krämer
+email: kraemer.finn@gmx.de
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to my personal website! Explore my blog, learn more about me, and connect via social media or email.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+
+url: "https://finn-kraemer.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+# default options for md files
+
+defaults:
+-
+  scope:
+    path: "posts"
+    type: ""
+  values:
+    layout: post
+
+defaults:
+-
+  scope:
+    path: "assets/img"
+    type: ""
+  values:
+    image: true
+
+# twitter_username: jekyllrb
+# instagram_username: kramer_finn
+# github_username:  Finn-Kraemer
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+remote_theme: jekyll/minima
+# theme: minima
+# remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+
+# minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "default"
+
+minima:
+  skin: dark
+  social_links:
+    - { platform: youtube, user_url: "https://www.youtube.com/@finn-kraemer" }
+    - { platform: github, user_url: "https://github.com/finn-kraemer" }
+    - { platform: instagram, user_url: "https://instagram.com/kramer_finn/" }
+
+# Define Header Pages
+header_pages:
+  - about.markdown
+  - posts.md
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
